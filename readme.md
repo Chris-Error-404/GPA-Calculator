@@ -3,7 +3,7 @@
 ### What is it?
 This script calculates a students GPA.
 
----
+--
 
 ### Where can i run it?
 You can easily run it on your browser console
