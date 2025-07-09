@@ -1,4 +1,4 @@
-#Understanding The Script
+# Understanding The Script
 
 ### What is it?
 This script calculates a students GPA.
@@ -7,7 +7,7 @@ This script calculates a students GPA.
 
 ### Where can i run it?
 You can easily run it on your browser console
-**Note:** It is a console only script no `HTML_DOM` manipulation.
+**Note:** It is a console only script no `HTML-DOM` manipulation.
 
 ---
 
@@ -73,4 +73,47 @@ The `gpaCalculator()` is mainly one single function
 Inside the function we have 
 - `else...if` Statement
 - `.reduce()` Method
+
+---
+
+##### Why `else...if`** ?
+Because it a more flexible control flow
+
+---
+
+##### What does `.reduce()` do?
+`reduce()` is used to convert an array into a single value
+here it is used twice 
+- for calculating all the sum total of `unit`s
+- for calculating the sum total of `GradepointUnits` i.e the result from multiplint `gradePoint` by `unit`
+
+---
+
+### How does the fuction `gpaCalculator` work with the control flow?
+
+#### The parameter
+The parameter here is the array of objects
+
+#### What happens when the function is called?
+
+##### Flow 1
+It uses `forEach()` to loop over the array of obejcts and mutates/add a new property to the array element it is looping over.
+
+It creates a new property
+
+- `grade`
+- `gradepoint`
+- `gradePointUnit`
+
+based on the conditions set
+
+##### Flow 2
+To calculate the total `unit`s it uses `reduce()` to convert/add all the `unit` properties into a single value i.e. the sum total of units
+
+
+##### Flow 3
+To calculate the total `gradePoint`s it uses `reduce()` to convert/add all the `gradePoint` properties into a single value i.e. the sum total of grade points refered to as `gradePointUnits` in the script (Yes not very creative)
+
+##### Flow 4
+Creation of the array of objects where the students info is stored and passing it into the function `gpaCalculator(studentResultYearOne)` as a parameter.
 
